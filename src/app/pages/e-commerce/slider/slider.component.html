@@ -1,4 +1,4 @@
-<div class="image-slider">
+<div class="image-slider" *ngIf="sliders.length">
       <ngb-carousel>
           <ng-template ngbSlide *ngFor="let slider of sliders">
               <img class="img-fluid mx-auto d-block" [src]="slider.imagePath" alt="Random first slide" width="100%">

@@ -57,6 +57,7 @@ import { EarningPieChartComponent } from './earning-card/back-side/earning-pie-c
 import { EarningCardFrontComponent } from './earning-card/front-side/earning-card-front.component';
 import { EarningLiveUpdateChartComponent } from './earning-card/front-side/earning-live-update-chart.component';
 import { SliderComponent } from './slider/slider.component';
+import { ProductLayoutComponent } from './product-layout/product-layout.component';
 
 @NgModule({
   imports: [
@@ -108,7 +109,8 @@ import { SliderComponent } from './slider/slider.component';
     EarningCardBackComponent,
     EarningPieChartComponent,
     EarningLiveUpdateChartComponent,
-    SliderComponent
+    SliderComponent,
+    ProductLayoutComponent
   ],
   providers: [
     CountryOrdersMapService,
