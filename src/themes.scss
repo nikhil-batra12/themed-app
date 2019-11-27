@@ -1,6 +1,12 @@
 @import '~@nebular/theme/styles/theming';
-@import '~@nebular/theme/styles/themes/dark';
+@import '~@nebular/theme/styles/themes/default';
 
 $nb-themes: nb-register-theme((
-    layout-background-color: color-basic-100
-), dark, dark);
+    header-background-color: color-basic-800,
+    header-text-color: color-basic-100,
+    sidebar-background-color: color-basic-800,
+    sidebar-text-color: color-basic-100,
+    menu-text-color: color-basic-100,
+    user-name-text-color: color-basic-100,
+    header-shadow: 0 0.5rem 1rem 0 #1a1f33,
+), default, default);
