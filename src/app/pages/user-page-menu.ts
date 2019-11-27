@@ -17,11 +17,11 @@ export const MENU_ITEMS: NbMenuItem[] = [
     children: [
       {
         title: 'Forgot Password',
-        link: '/pages/auth/request-password',
+        link: '/auth/request-password',
       },
       {
         title: 'Reset Password',
-        link: '/pages/auth/reset-password',
+        link: '/auth/reset-password',
       }
     ],
   },
