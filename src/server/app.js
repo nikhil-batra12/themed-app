@@ -30,7 +30,7 @@ function activateApp() {
     // parse application/json
     app.use(bodyParser.json());
 
-    app.get('/api/user/login', userController.login);
+    app.post('/api/user/login', userController.login);
     app.get('/api/user/details', userController.userDetails);
 
     app.get('/api/product/sliderimages', productsController.sliderImages);

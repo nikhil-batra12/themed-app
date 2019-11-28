@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from './product.service';
+import { NbAuthJWTToken , NbAuthService } from '@nebular/auth';
 
 @Component({
   selector: 'ngx-ecommerce',
@@ -7,26 +8,23 @@ import { ProductService } from './product.service';
 })
 export class ECommerceComponent implements OnInit{
   sliders =[];
-  constructor(private productService: ProductService){}
-//   sliders = [{
-//     "imagePath": "assets/images/slider1.jpg",
-//     "label": "First slide label",
-//     "text": "This is the first slide image"
-// },
-// {
-//     "imagePath": "assets/images/slider2.jpg",
-//     "label": "Second slide label",
-//     "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-// },
-// {
-//     "imagePath": "assets/images/slider3.jpg",
-//     "label": "Third slide label",
-//     "text": "Praesent commodo cursus magna, vel scelerisque nisl consectetur."
-// }];
+  user = {};
+  constructor(private productService: ProductService,private authService: NbAuthService){}
+
 
 ngOnInit(){
   this.productService.getSliderImages()
   .subscribe((response:any) => 
     this.sliders=response.data.sliderImages);
-}
+
+    this.authService.onTokenChange()
+      .subscribe((token: NbAuthJWTToken ) => {
+
+        if (token.isValid()) {
+          this.user = token.getPayload(); // here we receive a payload from the token and assigns it to our `user` variable 
+        }
+        console.log(token);
+      });
+  }
+
 }

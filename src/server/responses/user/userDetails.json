@@ -1,0 +1,8 @@
+{
+	"success": true,
+	"data": {
+        "role": "user",
+        "name": "First Last",
+        "email": "firstlast@gmail.com"
+	}
+}
