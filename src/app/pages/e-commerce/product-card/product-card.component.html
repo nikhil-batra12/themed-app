@@ -1,0 +1,19 @@
+<div class="image-slider" *ngIf="multipleImageSlider.length">
+        <div *ngFor="let products of multipleImageSlider">
+            <div class="row">
+                <div class="col-3" *ngFor="let product of products">
+                    <nb-card size="medium">
+                        <div class="picture" style.background-image="url({{product.imgSrc}})"></div>
+                        <div class="details">
+                          <div class="h4">{{product.name}}({{product.productId}})</div>
+                          <div class="h6">{{product.price}}</div>
+                          <div class="description">
+                            {{product.description}}
+                          </div>
+                        </div>
+                      </nb-card>
+                      
+                </div>
+            </div>
+        </div>
+</div>

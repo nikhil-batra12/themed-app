@@ -2,17 +2,34 @@
 	"success": true,
 	"data": {
 		"sliderImages" : [{
-            "imagePath": "assets/images/slider1.jpg",
+            "imagePath": "assets/images/door1.png",
             "label": "First slide label",
             "text": "This is the first slide image"
         },
         {
-            "imagePath": "assets/images/slider2.jpg",
+            "imagePath": "assets/images/door2.png",
             "label": "Second slide label",
             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
         },
         {
-            "imagePath": "assets/images/slider3.jpg",
+            "imagePath": "assets/images/door3.png",
+            "label": "Third slide label",
+            "text": "Praesent commodo cursus magna, vel scelerisque nisl consectetur."
+        },{
+            "imagePath": "assets/images/door4.png",
+            "label": "Third slide label",
+            "text": "Praesent commodo cursus magna, vel scelerisque nisl consectetur."
+        },{
+            "imagePath": "assets/images/door5.png",
+            "label": "Third slide label",
+            "text": "Praesent commodo cursus magna, vel scelerisque nisl consectetur."
+        },
+    {
+            "imagePath": "assets/images/door6.png",
+            "label": "Third slide label",
+            "text": "Praesent commodo cursus magna, vel scelerisque nisl consectetur."
+        },{
+            "imagePath": "assets/images/door7.png",
             "label": "Third slide label",
             "text": "Praesent commodo cursus magna, vel scelerisque nisl consectetur."
         }]

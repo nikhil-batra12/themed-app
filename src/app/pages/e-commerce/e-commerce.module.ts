@@ -1,3 +1,4 @@
+import { ProductCardComponent } from './product-card/product-card.component';
 import { NgModule } from '@angular/core';
 import {
   NbButtonModule,
@@ -74,7 +75,7 @@ import { ProductLayoutComponent } from './product-layout/product-layout.componen
     NgxEchartsModule,
     NgxChartsModule,
     LeafletModule,
-    NgbCarouselModule
+    NgbCarouselModule,
   ],
   declarations: [
     ECommerceComponent,
@@ -110,7 +111,8 @@ import { ProductLayoutComponent } from './product-layout/product-layout.componen
     EarningPieChartComponent,
     EarningLiveUpdateChartComponent,
     SliderComponent,
-    ProductLayoutComponent
+    ProductLayoutComponent,
+    ProductCardComponent,
   ],
   providers: [
     CountryOrdersMapService,

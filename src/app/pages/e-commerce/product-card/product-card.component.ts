@@ -1,25 +1,25 @@
 import { Component, OnInit, Input } from "@angular/core";
 
 @Component({
-  selector: "app-slider",
-  templateUrl: "./slider.component.html",
-  styleUrls: ["./slider.component.scss"]
+  selector: "app-product-card",
+  templateUrl: "./product-card.component.html",
+  styleUrls: ["./product-card.component.scss"]
 })
-export class SliderComponent implements OnInit {
-  @Input() sliders: string;
+export class ProductCardComponent implements OnInit {
+  @Input() products: Array<any>;
   multipleImageSlider: Array<any> = [];
   constructor() {}
 
   private multiImageSlider() {
     const resultArr = [];
     let j = -1;
-    for (let i = 0; i < this.sliders.length; i++) {
+    for (let i = 0; i < this.products.length; i++) {
       if (i % 4 === 0) {
         j++;
         resultArr[j] = [];
-        resultArr[j].push(this.sliders[i]);
+        resultArr[j].push(this.products[i]);
       } else {
-        resultArr[j].push(this.sliders[i]);
+        resultArr[j].push(this.products[i]);
       }
     }
     this.multipleImageSlider = resultArr;
@@ -27,6 +27,5 @@ export class SliderComponent implements OnInit {
   }
   ngOnInit() {
     this.multiImageSlider();
-    console.log(this.sliders);
   }
 }
