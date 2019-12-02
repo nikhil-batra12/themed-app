@@ -3,7 +3,7 @@
   <div class="image-slider" *ngIf="productsPerRow.length">
     <div *ngFor="let products of productsPerRow">
       <div class="row">
-        <div class="col-3" *ngFor="let product of products">
+        <div class="col-sm-12 col-md-6 col-lg-3" *ngFor="let product of products">
           <app-product-card [product]="product"></app-product-card>
         </div>
       </div>

@@ -6,3 +6,14 @@
 @include nb-install() {
   @include nb-theme-global();
 };
+
+//Generic classes
+.noMar{
+  margin: 0;
+}
+.noPad{
+  padding: 0;
+}
+.csrPtr{
+  cursor: pointer;
+}
