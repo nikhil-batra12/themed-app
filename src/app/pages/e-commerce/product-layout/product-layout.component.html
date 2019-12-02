@@ -1,4 +1,12 @@
+<h3>Product List</h3>
 <div>
-  <h3>Product List</h3>
-  <app-product-card [products]="products"></app-product-card>
+  <div class="image-slider" *ngIf="productsPerRow.length">
+    <div *ngFor="let products of productsPerRow">
+      <div class="row">
+        <div class="col-3" *ngFor="let product of products">
+          <app-product-card [product]="product"></app-product-card>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

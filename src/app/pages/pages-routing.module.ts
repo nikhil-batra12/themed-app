@@ -19,6 +19,11 @@ const routes: Routes = [{
       component: DashboardComponent,
     },
     {
+      path: 'orders',
+      loadChildren: () => import('./customer-order/customer-order.module')
+        .then(m => m.CustomerOrderModule),
+    },
+    {
       path: 'contact',
       loadChildren: () => import('./contact-us/contact-us.module')
         .then(m => m.ContactUsModule),

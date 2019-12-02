@@ -34,8 +34,8 @@ function activateApp() {
     app.get('/api/user/details', userController.userDetails);
 
     app.get('/api/product/sliderimages', productsController.sliderImages);
-    app.get('/api/product/list', productsController.productsList);
-
+    app.get('/api/get-products', productsController.productsList);
+    app.post('/api/product/submitenquiry', productsController.submitEnquiry);
     //Set paths
     //app.use(express.static(path.normalize(__dirname + '/client')));
 

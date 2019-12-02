@@ -1,5 +1,6 @@
 import { ProductCardComponent } from './product-card/product-card.component';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 import {
   NbButtonModule,
   NbCardModule,
@@ -59,6 +60,8 @@ import { EarningCardFrontComponent } from './earning-card/front-side/earning-car
 import { EarningLiveUpdateChartComponent } from './earning-card/front-side/earning-live-update-chart.component';
 import { SliderComponent } from './slider/slider.component';
 import { ProductLayoutComponent } from './product-layout/product-layout.component';
+import { ProductEnquiryFormComponent } from './product-enquiry-form/product-enquiry-form.component';
+import { ModalOverlaysModule } from '../modal-overlays/modal-overlays.module';
 
 @NgModule({
   imports: [
@@ -76,6 +79,8 @@ import { ProductLayoutComponent } from './product-layout/product-layout.componen
     NgxChartsModule,
     LeafletModule,
     NgbCarouselModule,
+    ReactiveFormsModule,
+    ModalOverlaysModule
   ],
   declarations: [
     ECommerceComponent,
@@ -113,9 +118,13 @@ import { ProductLayoutComponent } from './product-layout/product-layout.componen
     SliderComponent,
     ProductLayoutComponent,
     ProductCardComponent,
+    ProductEnquiryFormComponent,
   ],
   providers: [
     CountryOrdersMapService,
   ],
+  entryComponents: [
+    ProductEnquiryFormComponent
+  ]
 })
 export class ECommerceModule { }

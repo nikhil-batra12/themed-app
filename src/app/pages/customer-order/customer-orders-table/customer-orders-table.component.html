@@ -1,0 +1,16 @@
+<div>
+  <h3>Order Details</h3>
+  <nb-card>
+    <!-- <nb-card-header>
+    Order Details
+  </nb-card-header> -->
+    <nb-card-body>
+      <ng2-smart-table
+        [settings]="settings"
+        [source]="source"
+        (deleteConfirm)="onDeleteConfirm($event)"
+      >
+      </ng2-smart-table>
+    </nb-card-body>
+  </nb-card>
+</div>

@@ -21,16 +21,38 @@ export class ProductService {
   ) { }
 
   getSliderImages() {
-    const params = {};
     let config = {
-      url: AppSettings.apiEndpoints.products.sliderimages,
-      params
+      url: AppSettings.apiEndpoints.products.sliderimages
     };
     config = Object.assign({}, this.defaultConfig, config);
     return this.apiServceService.getRequest(config).pipe(
       map(response => {
-        this.sliderImages = response;
-        return this.sliderImages;
+        return response;
+      })
+    );
+  }
+
+  getProducts(){
+    let config = {
+      url: AppSettings.apiEndpoints.products.list
+    };
+    config = Object.assign({}, this.defaultConfig, config);
+    return this.apiServceService.getRequest(config).pipe(
+      map(response => {
+        return response;
+      })
+    );
+  }
+
+  submitProductEnquiry(data) {
+    let config = {
+      url: AppSettings.apiEndpoints.products.submitEnquiry,
+      data
+    };
+    config = Object.assign({}, this.defaultConfig, config);
+    return this.apiServceService.postRequest(config).pipe(
+      map(response => {
+        return response;
       })
     );
   }

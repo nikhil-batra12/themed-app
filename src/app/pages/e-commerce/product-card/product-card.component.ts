@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from "@angular/core";
+import { NbDialogService } from '@nebular/theme';
+import { ProductEnquiryFormComponent } from '../product-enquiry-form/product-enquiry-form.component';
 
 @Component({
   selector: "app-product-card",
@@ -6,26 +8,17 @@ import { Component, OnInit, Input } from "@angular/core";
   styleUrls: ["./product-card.component.scss"]
 })
 export class ProductCardComponent implements OnInit {
-  @Input() products: Array<any>;
-  multipleImageSlider: Array<any> = [];
-  constructor() {}
+  @Input() product: Array<any>;
+  constructor(private dialogService: NbDialogService) {}
 
-  private multiImageSlider() {
-    const resultArr = [];
-    let j = -1;
-    for (let i = 0; i < this.products.length; i++) {
-      if (i % 4 === 0) {
-        j++;
-        resultArr[j] = [];
-        resultArr[j].push(this.products[i]);
-      } else {
-        resultArr[j].push(this.products[i]);
-      }
-    }
-    this.multipleImageSlider = resultArr;
-    console.log(this.multipleImageSlider);
-  }
   ngOnInit() {
-    this.multiImageSlider();
+  }
+
+  open(product) {
+    this.dialogService.open(ProductEnquiryFormComponent, {
+      context: {
+        product: product,
+      },
+    });
   }
 }
