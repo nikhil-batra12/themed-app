@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { ApiServceService } from '../../@core/services/api-servce.service';
-import { AppSettings } from '../../config/app-settings';
+import { AppSettings } from '../../../config/app-settings';
 import { map } from 'rxjs/operators';
+import { ApiServceService } from '../../../@core/services/api-servce.service';
 
 @Injectable({
   providedIn: 'root'

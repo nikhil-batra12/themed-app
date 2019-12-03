@@ -15,6 +15,11 @@ const routes: Routes = [{
       component: ECommerceComponent,
     },
     {
+      path: 'user-dashboard',
+      loadChildren: () => import('./user-dashboard/user-dashboard.module')
+        .then(m => m.UserDashboardModule),
+    },
+    {
       path: 'iot-dashboard',
       component: DashboardComponent,
     },
@@ -83,15 +88,15 @@ const routes: Routes = [{
       loadChildren: () => import('./miscellaneous/miscellaneous.module')
         .then(m => m.MiscellaneousModule),
     },
-    {
-      path: '',
-      redirectTo: 'dashboard',
-      pathMatch: 'full',
-    },
-    {
-      path: '**',
-      component: NotFoundComponent,
-    },
+    // {
+    //   path: '',
+    //   redirectTo: 'dashboard',
+    //   pathMatch: 'full',
+    // },
+    // {
+    //   path: '**',
+    //   component: NotFoundComponent,
+    // },
   ],
 }];
 

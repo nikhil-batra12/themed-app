@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FormGroup, Validators, FormBuilder } from '@angular/forms';
-import { ProductService } from '../product.service';
 import { NbDialogRef } from '@nebular/theme';
 import {
   NbComponentStatus,
@@ -9,6 +8,7 @@ import {
   NbGlobalPosition,
   NbToastrService,
 } from '@nebular/theme';
+import { ProductService } from '../../shared/services/product.service';
 
 @Component({
   selector: 'ngx-product-enquiry-form',

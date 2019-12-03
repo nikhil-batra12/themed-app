@@ -3,7 +3,7 @@
     <a (click)="toggleSidebar()" href="#" class="sidebar-toggle">
       <nb-icon icon="menu-2-outline"></nb-icon>
     </a>
-    <img src="assets/images/logo.png" width="200px" height="80px">
+    <img src="assets/images/logo.png" width="200px" height="80px" />
   </div>
   <!-- <nb-select [selected]="currentTheme" (selectedChange)="changeTheme($event)" status="primary">
     <nb-option *ngFor="let theme of themes" [value]="theme.value"> {{ theme.name }}</nb-option>
@@ -12,9 +12,15 @@
 
 <div class="header-container">
   <!-- <nb-icon class="menu-icon" icon="settings-2-outline"></nb-icon> -->
-  <span class="mar-rgt"><a [routerLink]="['/pages/about-us']">About Us</a></span>
-  <span  class="mar-rgt"><a [routerLink]="['/pages/contact']">Contact Us</a></span>
-  <span><a [routerLink]="['/auth/login']">Login</a></span>
+  <div *nbIsGranted="['view','NO_LOGIN_STATE']">
+    <span class="mar-rgt"
+      ><a [routerLink]="['/pages/about-us']">About Us</a></span
+    >
+    <span class="mar-rgt"
+      ><a [routerLink]="['/pages/contact']">Contact Us</a></span
+    >
+    <span><a [routerLink]="['/auth/login']">Login</a></span>
+  </div>
   <!-- <nb-actions size="small">
 
      <nb-action class="control-item">
@@ -29,10 +35,6 @@
                [onlyPicture]="userPictureOnly"
                [name]="user?.name"
                [picture]="assets/images/user">
-               <nb-user [nbContextMenu]="userMenu"
-               
-               [name]="'Login'"
-               >
       </nb-user>
     </nb-action>
   </nb-actions> -->

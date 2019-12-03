@@ -12,6 +12,8 @@ import { ThemeModule } from './@theme/theme.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { NbPasswordAuthStrategy, NbAuthModule,NbAuthJWTToken } from "@nebular/auth";
+import { NbSecurityModule, NbRoleProvider } from '@nebular/security';
+
 import {
   NbChatModule,
   NbDatepickerModule,
@@ -21,6 +23,7 @@ import {
   NbToastrModule,
   NbWindowModule,
 } from '@nebular/theme';
+import { RoleService } from './pages/shared/services/role.service';
 
 @NgModule({
   declarations: [AppComponent],
@@ -41,10 +44,10 @@ import {
             endpoint: "/api/user/login",
             method: 'post',
             redirect: {
-              success: '/dashboard/',
+              success: '/pages/',
               failure: null
             },
-            defaultMessages: ["hey you"]
+            defaultMessages: ["Log in successfull"]
           }
         })
       ],
@@ -71,6 +74,7 @@ import {
         },
       }
     }),
+    NbSecurityModule.forRoot(),
 
     AppRoutingModule,
     
@@ -87,6 +91,9 @@ import {
       messageGoogleMapKey: 'AIzaSyA_wNuCzia92MAmdLRzmqitRGvCF7wCZPY',
     }),
     CoreModule.forRoot(),
+  ],
+  providers: [
+     { provide: NbRoleProvider, useClass: RoleService }
   ],
   bootstrap: [AppComponent],
 })

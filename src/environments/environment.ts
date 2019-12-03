@@ -11,6 +11,6 @@
 export const environment = {
   production: false,
   serverPath: "http://localhost:3000",
-  currentServerPath: "http://localhost:3000"
-  // currentServerPath: "https://fms.ismartnav.com"
+  // currentServerPath: "http://localhost:3000"
+  currentServerPath: "https://fms.ismartnav.com"
 };

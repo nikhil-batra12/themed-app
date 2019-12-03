@@ -120,23 +120,23 @@ export const NB_CORE_PROVIDERS = [
   //   },
   // }).providers,
 
-  NbSecurityModule.forRoot({
-    accessControl: {
-      guest: {
-        view: '*',
-      },
-      user: {
-        parent: 'guest',
-        create: '*',
-        edit: '*',
-        remove: '*',
-      },
-    },
-  }).providers,
+  // NbSecurityModule.forRoot({
+  //   accessControl: {
+  //     guest: {
+  //       view: '*',
+  //     },
+  //     user: {
+  //       parent: 'guest',
+  //       create: '*',
+  //       edit: '*',
+  //       remove: '*',
+  //     },
+  //   },
+  // }).providers,
 
-  {
-    provide: NbRoleProvider, useClass: NbSimpleRoleProvider,
-  },
+  // {
+  //   provide: NbRoleProvider, useClass: NbSimpleRoleProvider,
+  // },
   AnalyticsService,
   LayoutService,
   PlayerService,

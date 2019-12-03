@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductService } from './product.service';
+import { ProductService } from '../shared/services/product.service';
 import { NbAuthJWTToken , NbAuthService } from '@nebular/auth';
 
 @Component({

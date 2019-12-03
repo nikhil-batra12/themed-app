@@ -6,31 +6,31 @@
             "id": "P_1",
             "description": "This is product 1 of high quality.",
             "price": "Rs. 1000",
-            "imgSrc": "assets/images/product_1.png"
+            "featuredImage": "assets/images/product_1.png"
         },{
             "name": "Product 2",
             "id": "P_2",
             "description": "This is product 2 of high quality",
             "price": "Rs. 2000",
-            "imgSrc": "assets/images/product_1.png"
+            "featuredImage": "assets/images/product_1.png"
         },{
             "name": "Product 3",
             "id": "P_3",
             "description": "This is product 3 of high quality",
             "price": "Rs. 3000",
-            "imgSrc": "assets/images/product_1.png"
+            "featuredImage": "assets/images/product_1.png"
         },{
             "name": "Product 4",
             "id": "P_4",
             "description": "This is product 4 of high quality",
             "price": "Rs. 4000",
-            "imgSrc": "assets/images/product_1.png"
+            "featuredImage": "assets/images/product_1.png"
         },{
             "name": "Product 5",
             "id": "P_5",
             "description": "This is product 5 of high quality",
             "price": "Rs. 5000",
-            "imgSrc": "assets/images/product_1.png"
+            "featuredImage": "assets/images/product_1.png"
         }]
 	}
 }

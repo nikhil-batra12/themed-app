@@ -31,6 +31,18 @@ function activateApp() {
     app.use(bodyParser.json());
 
     app.post('/api/user/login', userController.login);
+
+    /*
+    https://jwt.io/
+    debugger
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6ImFzZGFzZDEyMzEyMyIsInJvbGUiOiJ1c2VyIiwibmFtZSI6IkZpcnN0IExhc3QiLCJlbWFpbCI6ImZpcnN0bGFzdEBnbWFpbC5jb20ifQ.l74zw6SQddpzXPPgm0jW91bvWR6YUvkipx_puuZMOLg
+
+    {
+  "token": "asdasd123123",
+  "role": "user",
+  "name": "First Last",
+  "email": "firstlast@gmail.com"
+} */
     app.get('/api/user/details', userController.userDetails);
 
     app.get('/api/product/sliderimages', productsController.sliderImages);
