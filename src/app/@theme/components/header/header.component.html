@@ -1,6 +1,6 @@
 <div class="header-container">
   <div class="logo-container">
-    <a (click)="toggleSidebar()" href="#" class="sidebar-toggle">
+    <a (click)="toggleSidebar()" href="#" class="sidebar-toggle" *nbIsGranted="['view','SIDEBAR']">
       <nb-icon icon="menu-2-outline"></nb-icon>
     </a>
     <img src="assets/images/logo.png" width="200px" height="80px" />

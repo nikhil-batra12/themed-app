@@ -44,7 +44,7 @@ import { RoleService } from './pages/shared/services/role.service';
             endpoint: "/api/user/login",
             method: 'post',
             redirect: {
-              success: '/pages/',
+              success: '/pages/dashboard',
               failure: null
             },
             defaultMessages: ["Log in successfull"]
@@ -83,14 +83,14 @@ import { RoleService } from './pages/shared/services/role.service';
     
     NbSidebarModule.forRoot(),
     NbMenuModule.forRoot(),
-    NbDatepickerModule.forRoot(),
-    NbDialogModule.forRoot(),
-    NbWindowModule.forRoot(),
+    // NbDatepickerModule.forRoot(),
+    // NbDialogModule.forRoot(),
+    // NbWindowModule.forRoot(),
     NbToastrModule.forRoot(),
-    NbChatModule.forRoot({
-      messageGoogleMapKey: 'AIzaSyA_wNuCzia92MAmdLRzmqitRGvCF7wCZPY',
-    }),
-    CoreModule.forRoot(),
+    // NbChatModule.forRoot({
+    //   messageGoogleMapKey: 'AIzaSyA_wNuCzia92MAmdLRzmqitRGvCF7wCZPY',
+    // }),
+    // CoreModule.forRoot(),
   ],
   providers: [
      { provide: NbRoleProvider, useClass: RoleService }

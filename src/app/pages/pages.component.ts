@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 
-import { MENU_ITEMS } from "./guest-page-menu";
+import { MENU_ITEMS } from "./menu-items/user-page-menu";
 import { NbAccessChecker } from "@nebular/security";
 import { Router } from "@angular/router";
 
@@ -16,7 +16,10 @@ import { Router } from "@angular/router";
 })
 export class PagesComponent implements OnInit {
   menu = MENU_ITEMS;
-  constructor(private accessChecker: NbAccessChecker, private router: Router) {}
+  constructor(
+    private accessChecker: NbAccessChecker,
+    private router: Router
+  ) {}
 
   ngOnInit() {
     this.accessChecker.isGranted("view", "USER_VIEW").subscribe(res => {
