@@ -1,10 +1,10 @@
 import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: "ngx-user-dashboard",
+  selector: "ngx-admin-dashboard",
   template: '<router-outlet></router-outlet>'
 })
-export class UserDashboardComponent implements OnInit {
+export class AdminDashboardComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {

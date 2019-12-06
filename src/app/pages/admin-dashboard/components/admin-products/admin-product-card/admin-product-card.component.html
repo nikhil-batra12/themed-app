@@ -1,0 +1,21 @@
+<nb-card size="medium">
+  <nb-card-header
+    ><button class="mar-rgt" type="submit" nbButton status="warning" (click)="editProduct(product)">
+      Edit
+    </button>
+    <button type="submit" nbButton status="danger" (click)="deleteProduct(product)">
+        Delete
+      </button>
+  </nb-card-header>
+  <div
+    class="picture"
+    style.background-image="url({{ product.featuredImage }})"
+  ></div>
+  <div class="details">
+    <div class="h4">{{ product.name }}({{ product.id }})</div>
+    <div class="h6">{{ product.price }}</div>
+    <div class="description">
+      {{ product.description }}
+    </div>
+  </div>
+</nb-card>

@@ -1,0 +1,19 @@
+<div>
+    <h3>Customer Details</h3>
+    <nb-card>
+      <!-- <nb-card-header>
+      Order Details
+    </nb-card-header> -->
+      <nb-card-body>
+        <ng2-smart-table
+          [settings]="settings"
+          [source]="source"
+          (create)="addCustomer($event, 'add')"
+          (edit)="addCustomer($event, 'edit')"
+          (delete)="deleteCustomer($event)"
+        >
+        </ng2-smart-table>
+      </nb-card-body>
+    </nb-card>
+  </div>
+  

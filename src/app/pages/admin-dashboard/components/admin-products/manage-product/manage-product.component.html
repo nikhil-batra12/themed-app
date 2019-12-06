@@ -1,0 +1,89 @@
+<div class="row product-form">
+  <div class="col-12">
+    <nb-card>
+      <nb-card-header>
+        <div class="row">
+          <div class="col-10" *ngIf="mode === 'add'">
+            Add New Product
+          </div>
+          <div class="col-10" *ngIf="mode === 'edit'">
+            Edit Product
+          </div>
+          <div class="col-2 close-icon">
+            <nb-icon icon="close" (click)="dismissDialog()"></nb-icon>
+          </div>
+        </div>
+      </nb-card-header>
+      <nb-card-body>
+        <form [formGroup]="productForm" autocomplete="off">
+          <div class="form-group">
+            <label for="productId" class="label col-4">Product Id</label>
+            <input
+              type="text"
+              nbInput
+              fullWidth
+              id="productId"
+              placeholder="Enter product id"
+              class="col-8 input-full-width size-medium shape-rectangle"
+              formControlName="productId"
+            />
+          </div>
+          <div class="form-group">
+            <label for="name" class="label col-4">Product Name</label>
+            <input
+              type="text"
+              nbInput
+              fullWidth
+              placeholder="Enter product name"
+              id="name"
+              class="col-8 input-full-width size-medium shape-rectangle"
+              formControlName="name"
+            />
+          </div>
+          <div class="form-group">
+            <label for="description" class="label col-4">Description</label>
+            <input
+              type="text"
+              nbInput
+              fullWidth
+              id="description"
+              placeholder="Enter product description"
+              formControlName="description"
+              maxlength="50"
+              class="col-8 input-full-width size-medium shape-rectangle"
+            />
+          </div>
+          <div class="form-group">
+            <label for="phoneNumber" class="label col-4">Price</label>
+            <input
+              type="text"
+              nbInput
+              fullWidth
+              id="phoneNumber"
+              placeholder="Enter product price"
+              formControlName="price"
+              maxlength="10"
+              class="col-8 input-full-width size-medium shape-rectangle"
+            />
+          </div>
+          <div class="form-group">
+            <label for="featuredImage" class="label col-4">Product Image</label>
+            <input
+              type="text"
+              nbInput
+              fullWidth
+              id="featuredImage"
+              placeholder="Enter product image"
+              formControlName="featuredImage"
+              maxlength="10"
+              class="col-8 input-full-width size-medium shape-rectangle"
+            />
+          </div>
+          <button type="submit" nbButton status="primary" (click)="saveProduct()">
+            Save Product
+          </button>
+        </form>
+      </nb-card-body>
+    </nb-card>
+  </div>
+</div>

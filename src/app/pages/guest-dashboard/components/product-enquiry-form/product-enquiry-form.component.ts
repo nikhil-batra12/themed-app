@@ -3,9 +3,7 @@ import { FormGroup, Validators, FormBuilder } from '@angular/forms';
 import { NbDialogRef } from '@nebular/theme';
 import {
   NbComponentStatus,
-  NbGlobalLogicalPosition,
   NbGlobalPhysicalPosition,
-  NbGlobalPosition,
   NbToastrService,
 } from '@nebular/theme';
 import { ProductService } from '../../../shared/services/product.service';

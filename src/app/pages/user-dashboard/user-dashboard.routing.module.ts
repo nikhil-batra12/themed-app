@@ -18,7 +18,7 @@ const routes: Routes = [
       {
         path: "orders",
         loadChildren: () =>
-          import("./modules/customer-order/customer-order.module").then(
+          import("./modules/customer-orders/customer-orders.module").then(
             m => m.CustomerOrderModule
           )
       },
@@ -30,11 +30,11 @@ const routes: Routes = [
         path: "about-us",
         component: AboutUsInfoComponent
       },
-      {
-        path: "**",
-        redirectTo: 'products',
-        pathMatch: 'full'
-      }
+      // {
+      //   path: "**",
+      //   redirectTo: 'products',
+      //   pathMatch: 'full'
+      // }
     ]
   },
 ];

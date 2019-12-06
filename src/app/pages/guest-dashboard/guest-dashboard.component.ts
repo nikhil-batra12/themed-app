@@ -12,20 +12,20 @@ export class GuestDashboardComponent implements OnInit {
   ngOnInit() {
     this.accessChecker.isGranted("view", "USER_VIEW").subscribe(res => {
       if (res) {
-        this.router.navigate(["pages/user-dashboard"]);
+        this.router.navigate(["pages/user-dashboard/products"]);
         return;
       }
     });
 
     this.accessChecker.isGranted("view", "ADMIN_PANEL").subscribe(res => {
       if (res) {
-        this.router.navigate(["pages/admin-dashboard"]);
+        this.router.navigate(["pages/admin-dashboard/products"]);
         return;
       }
     });
     this.accessChecker.isGranted("view", "NO_LOGIN_STATE").subscribe(res => {
       if (res) {
-        this.router.navigate(["pages/dashboard"]);
+        this.router.navigate(["pages/dashboard/products"]);
         return;
       }
     });

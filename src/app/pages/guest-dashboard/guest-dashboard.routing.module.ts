@@ -21,11 +21,6 @@ const routes: Routes = [
       {
         path: "about-us",
         component: AboutUsInfoComponent
-      },
-      {
-        path: "**",
-        redirectTo: 'products',
-        pathMatch: 'full'
       }
     ]
   },

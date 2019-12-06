@@ -1,16 +1,20 @@
 import { NbMenuItem } from '@nebular/theme';
 // import * as constants from './constants';
 
-export const USER_MENU_ITEMS: NbMenuItem[] = [
+export const ADMIN_MENU_ITEMS: NbMenuItem[] = [
   {
     title: 'Products',
     icon: 'car-outline',
-    link: '/pages/user-dashboard/products',
+    link: '/pages/admin-dashboard/products',
     home: true
   },{
     title: 'Orders',
     icon: 'shopping-cart-outline',
-    link: '/pages/user-dashboard/orders',
+    link: '/pages/admin-dashboard/orders',
+  },{
+    title: 'Customers',
+    icon: 'person-outline',
+    link: '/pages/admin-dashboard/customers',
   },{
     title: 'Account Settings',
     icon: 'settings-2-outline',

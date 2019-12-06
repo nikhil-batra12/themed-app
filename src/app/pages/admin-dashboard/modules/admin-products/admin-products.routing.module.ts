@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CustomerOrdersTableComponent } from '../../../guest-dashboard/components/customer-orders-table/customer-orders-table.component';
+import { AdminProductsComponent } from '../../components/admin-products/admin-products.component';
 
 
 const routes: Routes = [
   {
     path: '',
-    component: CustomerOrdersTableComponent
+    component: AdminProductsComponent
   },
 ];
 
@@ -18,6 +18,6 @@ const routes: Routes = [
     RouterModule,
   ],
 })
-export class CustomerOrderRoutingModule {
+export class AdminProductsRoutingModule {
 }
 

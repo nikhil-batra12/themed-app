@@ -1,0 +1,102 @@
+<div class="row customer-form">
+  <div class="col-12">
+    <nb-card>
+      <nb-card-header>
+        <div class="row">
+          <div class="col-10" *ngIf="mode === 'add'">
+            Add New Customer
+          </div>
+          <div class="col-10" *ngIf="mode === 'edit'">
+            Edit Customer
+          </div>
+          <div class="col-2 close-icon">
+            <nb-icon icon="close" (click)="dismissDialog()"></nb-icon>
+          </div>
+        </div>
+      </nb-card-header>
+      <nb-card-body>
+        <form [formGroup]="customerForm" autocomplete="off">
+          <div class="form-group">
+            <label for="customerId" class="label col-4">Customer Id</label>
+            <input
+              type="text"
+              nbInput
+              fullWidth
+              id="customerId"
+              placeholder="Enter customer id"
+              class="col-8 input-full-width size-medium shape-rectangle"
+              formControlName="customerId"
+            />
+          </div>
+          <div class="form-group">
+            <label for="name" class="label col-4">Customer Name</label>
+            <input
+              type="text"
+              nbInput
+              fullWidth
+              placeholder="Enter customer Name"
+              id="name"
+              class="col-8 input-full-width size-medium shape-rectangle"
+              formControlName="customerName"
+            />
+          </div>
+          <div class="form-group">
+            <label for="customerAddress" class="label col-4">Customer Address</label>
+            <input
+              type="text"
+              nbInput
+              fullWidth
+              id="customerAddress"
+              placeholder="Enter customer address"
+              formControlName="customerAddress"
+              maxlength="10"
+              class="col-8 input-full-width size-medium shape-rectangle"
+            />
+          </div>
+          <div class="form-group">
+            <label for="customerEmail" class="label col-4">Customer Email</label>
+            <input
+              type="text"
+              nbInput
+              fullWidth
+              id="customerEmail"
+              placeholder="Enter customer email"
+              formControlName="customerEmail"
+              maxlength="10"
+              class="col-8 input-full-width size-medium shape-rectangle"
+            />
+          </div>
+          <div class="form-group">
+            <label for="customerPhoneNumber" class="label col-4">Customer Phone Number</label>
+            <input
+              type="text"
+              nbInput
+              fullWidth
+              id="customerPhoneNumber"
+              placeholder="Enter customer phone number"
+              formControlName="customerPhoneNumber"
+              maxlength="10"
+              class="col-8 input-full-width size-medium shape-rectangle"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="exampleInputPassword1" class="label col-4"
+              >Other Details</label
+            >
+            <textarea
+              nbInput
+              fullWidth
+              placeholder="Enter other customer details"
+              formControlName="otherDetails"
+              class="col-8"
+            ></textarea>
+          </div>
+          <button type="submit" nbButton status="primary" (click)="saveCustomer()">
+            Save Customer
+          </button>
+        </form>
+      </nb-card-body>
+    </nb-card>
+  </div>
+</div>
