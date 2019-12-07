@@ -1,0 +1,29 @@
+{
+    "success" : true,
+    "data": [
+        {
+          "id": "customer1",
+          "name": "First Customer",
+          "address": "abc road",
+          "email": "cust1@gmail.com",
+          "phoneNumber": 9898989898,
+          "otherDetails": "asdasldjlaksd"
+        },
+        {
+          "id": "customer2",
+          "name": "Second Customer",
+          "address": "def road",
+          "email": "cust2@gmail.com",
+          "phoneNumber": 9666666555,
+          "otherDetails": "asdasldjlaksd"
+        },
+        {
+          "id": "customer3",
+          "name": "Third Customer",
+          "address": "xyz road",
+          "email": "cust3@gmail.com",
+          "phoneNumber": 984111111,
+          "otherDetails": "asdasldjlaksd"
+        }
+      ]
+}

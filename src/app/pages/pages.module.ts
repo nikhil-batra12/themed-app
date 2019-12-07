@@ -6,6 +6,7 @@ import { PagesComponent } from "./pages.component";
 // import { DashboardModule } from "./backup/dashboard/dashboard.module";
 import { PagesRoutingModule } from "./pages-routing.module";
 import { MiscellaneousModule } from "./backup/miscellaneous/miscellaneous.module";
+import { SharedModule } from './shared/modules/shared.module';
 
 @NgModule({
   imports: [
@@ -15,6 +16,7 @@ import { MiscellaneousModule } from "./backup/miscellaneous/miscellaneous.module
     NbIconModule,
     // DashboardModule,
     MiscellaneousModule,
+    SharedModule
   ],
   declarations: [PagesComponent],
 })

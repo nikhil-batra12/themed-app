@@ -21,21 +21,22 @@
     >
     <span><a [routerLink]="['/auth/login']">Login</a></span>
   </div>
-  <!-- <nb-actions size="small">
+  <nb-actions size="small">
 
-     <nb-action class="control-item">
+     <!-- <nb-action class="control-item">
       <nb-search type="rotate-layout"></nb-search>
     </nb-action>
     <nb-action class="control-item" icon="email-outline"></nb-action>
     <nb-action class="control-item" icon="bell-outline"></nb-action> 
-    <nb-action icon="email-outline"><span class="subtitle number ng-star-inserted">Contact</span></nb-action>
+    <nb-action icon="email-outline"><span class="subtitle number ng-star-inserted">Contact</span></nb-action> -->
     
-    <nb-action class="user-action" *nbIsGranted="['view', 'user']" >
+    <nb-action class="user-action" *nbIsGranted="['view', 'PROFILE']" >
       <nb-user [nbContextMenu]="userMenu"
                [onlyPicture]="userPictureOnly"
                [name]="user?.name"
-               [picture]="assets/images/user">
+               [picture]="">
       </nb-user>
+      <!-- <nb-icon type="nb-edit"></nb-icon> -->
     </nb-action>
-  </nb-actions> -->
+  </nb-actions>
 </div>

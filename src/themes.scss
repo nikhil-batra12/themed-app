@@ -9,5 +9,7 @@ $nb-themes: nb-register-theme((
     menu-text-color: color-basic-100,
     user-name-text-color: color-basic-100,
     header-shadow: 0 0.5rem 1rem 0 #1a1f33,
-    menu-item-divider-color: color-basic-1000
+    menu-item-divider-color: color-basic-1000,
+    context-menu-background-color: color-basic-800,
+    user-initials-text-color: color-basic-100
 ), default, default);

@@ -1,3 +1,4 @@
+import { LogoutComponent } from './../components/logout/logout.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -8,10 +9,10 @@ import { ThemeModule } from '../../../@theme/theme.module';
 import { AboutUsInfoComponent } from '../components/about-us-info/about-us-info.component';
 
 @NgModule({
-  declarations: [ContactUsFormComponent,ProductCardComponent,ProductLayoutComponent, AboutUsInfoComponent],
+  declarations: [ContactUsFormComponent,ProductCardComponent,ProductLayoutComponent, AboutUsInfoComponent,LogoutComponent],
   imports: [CommonModule, ThemeModule],
   exports:[
-    ReactiveFormsModule,ContactUsFormComponent,ProductCardComponent,ProductLayoutComponent, AboutUsInfoComponent
+    ReactiveFormsModule,ContactUsFormComponent,ProductCardComponent,ProductLayoutComponent, AboutUsInfoComponent, LogoutComponent
   ],
 })
 export class SharedModule { }

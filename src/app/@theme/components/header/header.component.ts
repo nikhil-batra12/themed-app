@@ -9,7 +9,8 @@ import {
 // import { UserData } from "../../../@core/data/users";
 import { map, takeUntil } from "rxjs/operators";
 import { Subject } from "rxjs";
-import { LayoutService } from '../../../@core/utils/layout.service';
+import { LayoutService } from "../../../@core/utils/layout.service";
+import { NbAuthService, NbAuthJWTToken } from "@nebular/auth";
 
 @Component({
   selector: "ngx-header",
@@ -42,7 +43,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   // currentTheme = 'default';
 
-  userMenu = [{ title: "Profile" }, { title: "Log out" }];
+  userMenu:any = [{ title: "Profile" }, { title: "Log out" }];
 
   constructor(
     private sidebarService: NbSidebarService,
@@ -50,7 +51,8 @@ export class HeaderComponent implements OnInit, OnDestroy {
     private themeService: NbThemeService,
     // private userService: UserData,
     private layoutService: LayoutService,
-    private breakpointService: NbMediaBreakpointsService
+    private breakpointService: NbMediaBreakpointsService,
+    private authService: NbAuthService
   ) {}
 
   ngOnInit() {
@@ -60,6 +62,12 @@ export class HeaderComponent implements OnInit, OnDestroy {
     //   .getUsers()
     //   .pipe(takeUntil(this.destroy$))
     //   .subscribe((users: any) => (this.user = users.nick));
+
+    this.authService.getToken()
+    .subscribe((res:NbAuthJWTToken) => {
+      this.user = res.isValid() ? res.getPayload() : null;
+      this.userMenu = [{ title: this.user? this.user.email : null }, { title: "Log out", link: "pages/logout" }];
+    });
 
     const { xl } = this.breakpointService.getBreakpointsMap();
     this.themeService

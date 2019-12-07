@@ -48,6 +48,10 @@ import { RoleService } from './pages/shared/services/role.service';
               failure: null
             },
             defaultMessages: ["Log in successfull"]
+          },
+          logout: {
+            endpoint: '/api/user/logout',
+            method: 'post'
           }
         })
       ],

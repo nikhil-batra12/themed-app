@@ -34,7 +34,7 @@ export class ProductService {
 
   getProducts(){
     let config = {
-      url: AppSettings.apiEndpoints.products.list
+      url: AppSettings.apiEndpoints.products.getProduct
     };
     config = Object.assign({}, this.defaultConfig, config);
     return this.apiServceService.getRequest(config).pipe(

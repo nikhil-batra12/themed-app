@@ -1,3 +1,4 @@
+import { LogoutComponent } from './shared/components/logout/logout.component';
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 
@@ -23,6 +24,10 @@ const routes: Routes = [{
       loadChildren: () => import('./admin-dashboard/admin-dashboard.module')
         .then(m => m.AdminDashboardModule),
     },
+    {
+      path: 'logout',
+      component: LogoutComponent
+    }
     // {
     //   path: 'iot-dashboard',
     //   component: DashboardComponent,

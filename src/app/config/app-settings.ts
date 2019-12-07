@@ -10,21 +10,24 @@ export class AppSettings {
       details: `${apiServer}/api/user/details`
     },
     products: {
-      list: `${currentApiServer}/api/get-products`,
       sliderimages: `${apiServer}/api/product/sliderimages`,
       submitEnquiry: `${apiServer}/api/product/submitenquiry`,
+      getProduct: `${apiServer}/api/getProduct`,
       addProduct: "{apiServer}/api/addProduct/",
-      saveProduct: "{apiServer}/api/saveProduct/"
+      updateProduct: "{apiServer}/api/updateProduct/",
+      deleteProduct: "{apiServer}/api/deleteProduct/{productId}"
     },
     orders: {
-      getOrders: "{apiServer}/api/getOrders/",
-      addOrder: "{apiServer}/api/addOrder/",
-      saveOrder: "{apiServer}/api/saveOrder/"
+      getOrder: `${apiServer}/api/getOrder/`,
+      addOrder: `{apiServer}/api/addOrder/`,
+      updateOrder: `{apiServer}/api/updateOrder/`,
+      deleteOrder: `{apiServer}/api/deleteOrder/:orderId`,
     },
     customers: {
-      getCsutomers: "{apiServer}/api/getCustomers/",
-      addCustomer: "{apiServer}/api/addCustomer/",
-      saveCustomer: "{apiServer}/api/saveCustomer/"
+      getCustomer: `${apiServer}/api/getCustomer/`,
+      addCustomer: `${apiServer}/api/addCustomer/`,
+      updateCustomer: `${apiServer}/api/updateCustomer/`,
+      deleteCustomer: `${apiServer}/api/deleteCustomer/:customerId`
     }
   };
 }

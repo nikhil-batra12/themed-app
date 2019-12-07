@@ -6,6 +6,7 @@ var bodyParser = require('body-parser');
 /* Internal controller dependencies*/
 var userController = require('./controllers/userController');
 var productsController = require('./controllers/productsController');
+var customersController = require('./controllers/customersController');
 
 /* Set port for local/heroku environment*/
 var port = process.env.PORT || 3000;
@@ -31,6 +32,7 @@ function activateApp() {
     app.use(bodyParser.json());
 
     app.post('/api/user/login', userController.login);
+    app.post('/api/user/logout', userController.logout);
 
     /*
     https://jwt.io/
@@ -46,8 +48,16 @@ function activateApp() {
     app.get('/api/user/details', userController.userDetails);
 
     app.get('/api/product/sliderimages', productsController.sliderImages);
-    app.get('/api/get-products', productsController.productsList);
+    app.get('/api/getProduct', productsController.productsList);
     app.post('/api/product/submitenquiry', productsController.submitEnquiry);
+
+    app.get('/api/getCustomer', customersController.getCustomers);
+    app.post('/api/updateCustomer', customersController.editCustomer);
+    app.post('/api/addCustomer', customersController.addCustomer);
+    app.post('/api/deleteCustomer/:customerId', customersController.deleteCustomer);
+
+
+
     //Set paths
     //app.use(express.static(path.normalize(__dirname + '/client')));
 

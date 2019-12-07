@@ -23,13 +23,13 @@ export class ManageOrderComponent implements OnInit {
 
   createForm() {
     this.orderForm = this.fb.group({
-      orderId: [this.order? this.order.orderId:  null, [Validators.required, Validators.pattern('^[a-zA-Z ]*')]],
-      orderDate: [this.order? this.order.orderDate: null, [Validators.required]],
-      completionDate: [this.order? this.order.orderCompletionDate: null],
+      orderId: [this.order? this.order.id:  null, [Validators.required, Validators.pattern('^[a-zA-Z ]*')]],
+      orderDate: [this.order? this.order.date: null, [Validators.required]],
+      completionDate: [this.order? this.order.completionDate: null],
       amount: [this.order? this.order.amount: null, [Validators.required, Validators.pattern('^[0-9]{10}')]],
       advance: [this.order? this.order.advance: null, [Validators.pattern('^[0-9]{10}')]],
       balance: [this.order? this.order.balance: null, [Validators.pattern('^[0-9]{10}')]],
-      productDetails: [this.order? this.order.orderProductDetails: null, [Validators.required]],
+      productDetails: [this.order? this.order.productDetails: null, [Validators.required]],
       customerId: [this.order? this.order.customerId: null, Validators.maxLength(300)],
       coupon: [this.order? this.order.coupon: null, Validators.maxLength(300)]
     });

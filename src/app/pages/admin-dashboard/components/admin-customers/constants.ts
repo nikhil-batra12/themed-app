@@ -11,23 +11,23 @@ export const settings = {
     confirmDelete: true
   },
   columns: {
-    customerId: {
+    id: {
       title: "Customer Id",
       type: "string"
     },
-    customerName: {
+    name: {
       title: "Customer Name",
       type: "string"
     },
-    customerAddress: {
+    address: {
       title: "Customer Address",
       type: "string"
     },
-    customerEmail: {
+    email: {
       title: "Customer Email",
       type: "string"
     },
-    customerPhoneNumber: {
+    phoneNumber: {
       title: "Customer Phone Number",
       type: "number"
     },

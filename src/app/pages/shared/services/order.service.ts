@@ -21,7 +21,7 @@ export class OrderService {
 
   getOrders(){
     let config = {
-      url: AppSettings.apiEndpoints.orders.getOrders
+      url: AppSettings.apiEndpoints.orders.getOrder
     };
     config = Object.assign({}, this.defaultConfig, config);
     return this.apiServceService.getRequest(config).pipe(
@@ -33,7 +33,7 @@ export class OrderService {
 
   addOrder(data:any){
     let config = {
-      url: AppSettings.apiEndpoints.orders.addOrder,
+      url: AppSettings.apiEndpoints.orders.getOrder,
       data
     };
     config = Object.assign({}, this.defaultConfig, config);
@@ -46,7 +46,7 @@ export class OrderService {
 
   saveOrder(data:any){
     let config = {
-      url: AppSettings.apiEndpoints.orders.getOrders,
+      url: AppSettings.apiEndpoints.orders.getOrder,
       data
     };
     config = Object.assign({}, this.defaultConfig, config);

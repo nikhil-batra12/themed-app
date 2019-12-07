@@ -21,7 +21,7 @@ export class CustomerService {
 
   getCustomers(){
     let config = {
-      url: AppSettings.apiEndpoints.customers.getCsutomers
+      url: AppSettings.apiEndpoints.customers.getCustomer
     };
     config = Object.assign({}, this.defaultConfig, config);
     return this.apiServceService.getRequest(config).pipe(
@@ -44,10 +44,22 @@ export class CustomerService {
     );
   }
 
-  saveCustomer(data:any){
+  updateCustomer(data:any){
     let config = {
-      url: AppSettings.apiEndpoints.customers.saveCustomer,
+      url: AppSettings.apiEndpoints.customers.updateCustomer,
       data
+    };
+    config = Object.assign({}, this.defaultConfig, config);
+    return this.apiServceService.postRequest(config).pipe(
+      map(response => {
+        return response;
+      })
+    );
+  }
+
+  deleteCustomer(customerId:any){
+    let config = {
+      url: AppSettings.apiEndpoints.customers.updateCustomer.replace(":customerId",customerId),
     };
     config = Object.assign({}, this.defaultConfig, config);
     return this.apiServceService.postRequest(config).pipe(

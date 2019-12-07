@@ -3,6 +3,7 @@ import { LocalDataSource } from "ng2-smart-table";
 import * as tableSettings from './constants';
 import { NbDialogService } from '@nebular/theme';
 import { ManageCustomerComponent } from './manage-customer/manage-customer.component';
+import { CustomerService } from '../../../shared/services/customer.service';
 
 @Component({
   selector: 'ngx-admin-customers',
@@ -12,35 +13,37 @@ import { ManageCustomerComponent } from './manage-customer/manage-customer.compo
 export class AdminCustomersComponent implements OnInit {
   source: LocalDataSource = new LocalDataSource();
   settings = tableSettings.settings;
-  constructor(private dialogService: NbDialogService) {}
+  constructor(private dialogService: NbDialogService, private customerService: CustomerService) {}
   data = [
     {
-      customerId: "customer1",
-      customerName: "First Customer",
-      customerAddress: "abc road",
-      customerEmail: "cust1@gmail.com",
-      customerPhoneNumber: 9898989898,
+      id: "customer1",
+      name: "First Customer",
+      address: "abc road",
+      email: "cust1@gmail.com",
+      phoneNumber: 9898989898,
       otherDetails: "asdasldjlaksd",
     },
     {
-      customerId: "customer2",
-      customerName: "Second Customer",
-      customerAddress: "def road",
-      customerEmail: "cust2@gmail.com",
-      customerPhoneNumber: 9666666555,
+      id: "customer2",
+      name: "Second Customer",
+      address: "def road",
+      email: "cust2@gmail.com",
+      phoneNumber: 9666666555,
       otherDetails: "asdasldjlaksd",
     },
     {
-      customerId: "customer3",
-      customerName: "Third Customer",
-      customerAddress: "xyz road",
-      customerEmail: "cust3@gmail.com",
-      customerPhoneNumber: 984111111,
+      id: "customer3",
+      name: "Third Customer",
+      address: "xyz road",
+      email: "cust3@gmail.com",
+      phoneNumber: 984111111,
       otherDetails: "asdasldjlaksd",
     }
   ];
   ngOnInit() {
-    this.source.load(this.data);
+    this.customerService.getCustomers().subscribe(res => {
+      this.source.load(res.data);
+    })
   }
 
   addCustomer(event, mode='add') {
@@ -55,7 +58,10 @@ export class AdminCustomersComponent implements OnInit {
 
   deleteCustomer(event){
     if(this.onDeleteConfirm()){
-      this.source.remove(event.data);
+      this.customerService.deleteCustomer(event.data.id).subscribe(res => {
+        this.source.remove(event.data);
+        alert(res.data);
+      })
     }
   }
 

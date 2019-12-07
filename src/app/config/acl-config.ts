@@ -3,10 +3,10 @@ const aclConfig = {
     view: ['NO_LOGIN_STATE']
   },
   user: {
-    view: ['SIDEBAR', 'USER_VIEW']
+    view: ['SIDEBAR', 'USER_VIEW', 'PROFILE']
   },
   admin: {
-    view: ['SIDEBAR', 'ADMIN_PANEL']
+    view: ['SIDEBAR', 'ADMIN_PANEL', 'PROFILE']
   }
 };
 

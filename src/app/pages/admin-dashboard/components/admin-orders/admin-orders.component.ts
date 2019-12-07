@@ -16,35 +16,35 @@ export class AdminOrdersComponent implements OnInit {
   constructor(private dialogService: NbDialogService) {}
   data = [
     {
-      orderId: "order1",
-      orderDate: "01/10/2019",
+      id: "order1",
+      date: "01/10/2019",
       orderCompletionDate: "05/10/2019",
       amount: 10000,
       advance: 3000,
       balance: 7000,
-      orderProductDetails: "Door 1 order",
+      productDetails: "Door 1 order",
       customerId: "c1",
       coupon: "Coupon1"
     },
     {
-      orderId: "order2",
-      orderDate: "02/10/2019",
-      orderCompletionDate: "06/10/2019",
+      id: "order2",
+      date: "02/10/2019",
+      completionDate: "06/10/2019",
       amount: 10000,
       advance: 4000,
       balance: 6000,
-      orderProductDetails: "Door 2 order",
+      productDetails: "Door 2 order",
       customerId: "c2",
       coupon: "coupon2"
     },
     {
-      orderId: "order3",
-      orderDate: "03/10/2019",
+      id: "order3",
+      date: "03/10/2019",
       orderCompletionDate: "07/10/2019",
       amount: 12000,
       advance: 4000,
       balance: 8000,
-      orderProductDetails: "Door 3 order",
+      productDetails: "Door 3 order",
       customerId: "c3",
       coupon: "Coupon3"
     }
