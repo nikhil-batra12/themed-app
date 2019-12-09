@@ -13,9 +13,9 @@ export class AppSettings {
       sliderimages: `${apiServer}/api/product/sliderimages`,
       submitEnquiry: `${apiServer}/api/product/submitenquiry`,
       getProduct: `${apiServer}/api/getProduct`,
-      addProduct: "{apiServer}/api/addProduct/",
-      updateProduct: "{apiServer}/api/updateProduct/",
-      deleteProduct: "{apiServer}/api/deleteProduct/{productId}"
+      addProduct: `${apiServer}/api/addProduct/`,
+      updateProduct: `${apiServer}/api/updateProduct/`,
+      deleteProduct: `${apiServer}/api/deleteProduct/:productId`
     },
     orders: {
       getOrder: `${apiServer}/api/getOrder/`,

@@ -8,16 +8,19 @@ import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 import { SharedModule } from '../../../shared/modules/shared.module';
 import { NbDialogModule } from '@nebular/theme';
 import { ThemeModule } from '../../../../@theme/theme.module';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import { CarouselComponent } from '../../components/carousel/carousel.component';
 
 @NgModule({
-  declarations: [ProductsComponent, SliderComponent, ProductEnquiryFormComponent],
+  declarations: [ProductsComponent, SliderComponent, ProductEnquiryFormComponent, CarouselComponent],
   imports: [
     CommonModule,
     ProductRoutingModule,
     NgbCarouselModule,
     ThemeModule,
     SharedModule,
-    NbDialogModule.forRoot()
+    NbDialogModule.forRoot(),
+    CarouselModule
   ],
   entryComponents: [
     ProductEnquiryFormComponent

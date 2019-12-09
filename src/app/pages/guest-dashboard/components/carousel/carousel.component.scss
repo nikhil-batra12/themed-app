@@ -1,0 +1,23 @@
+.carousel-container{
+    height:300px;
+}
+
+.carousel-img{
+    width: 70% !important;
+    margin: auto;
+}
+.owl-theme .owl-nav .owl-prev{
+    top: 40%;
+    position: absolute;
+    left: 0;
+}
+.owl-next{
+    top: 40%;
+    position: absolute;
+    right: 0;
+}
+@media only screen and (max-width: 768px) {
+    .carousel-img{
+        width: 90% !important;
+    }
+}

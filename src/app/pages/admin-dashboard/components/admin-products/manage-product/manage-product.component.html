@@ -68,7 +68,26 @@
           </div>
           <div class="form-group">
             <label for="featuredImage" class="label col-4">Product Image</label>
-            <input
+            <div class="col-8 image-upload">
+              <div class="form-group">
+                <input
+                  type="file"
+                  name="image"
+                  (change)="fileProgress($event)"
+                />
+              </div>
+              <div *ngIf="fileUploadProgress">
+                Upload progress: {{ fileUploadProgress }}
+              </div>
+              <div class="image-preview mb-3" *ngIf="previewUrl">
+                <img [src]="previewUrl" height="200" />
+              </div>
+
+              <div class="mb-3" *ngIf="uploadedFilePath">
+                {{ uploadedFilePath }}
+              </div>
+            </div>
+            <!-- <input
               type="text"
               nbInput
               fullWidth
@@ -77,9 +96,35 @@
               formControlName="featuredImage"
               maxlength="10"
               class="col-8 input-full-width size-medium shape-rectangle"
-            />
+            /> -->
           </div>
-          <button type="submit" nbButton status="primary" (click)="saveProduct()">
+          <!-- <div class="row">
+            <div class="col-md-6 offset-md-3">
+              <div class="form-group">
+                <input
+                  type="file"
+                  name="image"
+                  (change)="fileProgress($event)"
+                />
+              </div>
+              <div *ngIf="fileUploadProgress">
+                Upload progress: {{ fileUploadProgress }}
+              </div>
+              <div class="image-preview mb-3" *ngIf="previewUrl">
+                <img [src]="previewUrl" height="200" />
+              </div>
+
+              <div class="mb-3" *ngIf="uploadedFilePath">
+                {{ uploadedFilePath }}
+              </div>
+            </div>
+          </div> -->
+          <button
+            type="submit"
+            nbButton
+            status="primary"
+            (click)="saveProduct()"
+          >
             Save Product
           </button>
         </form>

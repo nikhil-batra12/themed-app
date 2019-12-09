@@ -50,6 +50,11 @@ function activateApp() {
     app.get('/api/product/sliderimages', productsController.sliderImages);
     app.get('/api/getProduct', productsController.productsList);
     app.post('/api/product/submitenquiry', productsController.submitEnquiry);
+    app.post('/api/updateProduct', productsController.editProduct);
+    app.post('/api/addProduct', productsController.addProduct);
+    app.post('/api/deleteProduct/:productId', productsController.deleteProduct);
+
+
 
     app.get('/api/getCustomer', customersController.getCustomers);
     app.post('/api/updateCustomer', customersController.editCustomer);

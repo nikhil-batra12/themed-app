@@ -13,7 +13,7 @@ export class AdminProductsComponent implements OnInit {
   productsPerRow = [];
   constructor(
     private productService: ProductService,
-    private dialogService: NbDialogService
+    private dialogService: NbDialogService,
   ) {}
 
   ngOnInit() {
@@ -26,8 +26,11 @@ export class AdminProductsComponent implements OnInit {
   deleteProduct(productData) {
     const { id } = productData;
     if (this.onDeleteConfirm()) {
-      this.products = this.products.filter(product => product.id !== id);
-      this.computeProductsPerRow();
+      this.productService.deleteProduct(id).subscribe(res => {
+        this.products = this.products.filter(product => product.id !== id);
+        this.computeProductsPerRow();
+        alert(res.data);
+      })
     }
   }
 

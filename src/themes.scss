@@ -1,8 +1,9 @@
-@import '~@nebular/theme/styles/theming';
-@import '~@nebular/theme/styles/themes/default';
+@import "~@nebular/theme/styles/theming";
+@import "~@nebular/theme/styles/themes/default";
 
-$nb-themes: nb-register-theme((
-    header-background-color: color-basic-800,
+$nb-themes: nb-register-theme(
+  (
+    header-background-color: #646873,
     header-text-color: color-basic-100,
     sidebar-background-color: color-basic-800,
     sidebar-text-color: color-basic-100,
@@ -12,4 +13,21 @@ $nb-themes: nb-register-theme((
     menu-item-divider-color: color-basic-1000,
     context-menu-background-color: color-basic-800,
     user-initials-text-color: color-basic-100
-), default, default);
+  ),
+  default,
+  default
+);
+
+.owl-theme .owl-nav .owl-prev {
+  top: 40%;
+  position: absolute;
+  left: 0;
+  background-color: #646873;
+}
+
+.owl-theme .owl-nav .owl-next {
+  top: 40%;
+  position: absolute;
+  right: 0;
+  background-color: #646873;
+}

@@ -56,4 +56,44 @@ export class ProductService {
       })
     );
   }
+
+  addProduct(data:any){
+    let config = {
+      url: AppSettings.apiEndpoints.products.addProduct,
+      data
+    };
+    config = Object.assign({}, this.defaultConfig, config);
+    return this.apiServceService.postRequest(config).pipe(
+      map(response => {
+        return response;
+      })
+    );
+  }
+
+  updateProduct(data:any){
+    let config = {
+      url: AppSettings.apiEndpoints.products.updateProduct,
+      data
+    };
+    config = Object.assign({}, this.defaultConfig, config);
+    return this.apiServceService.postRequest(config).pipe(
+      map(response => {
+        return response;
+      })
+    );
+  }
+
+  deleteProduct(productId:any){
+    let config = {
+      url: AppSettings.apiEndpoints.products.deleteProduct.replace(":productId",productId),
+    };
+    config = Object.assign({}, this.defaultConfig, config);
+    return this.apiServceService.postRequest(config).pipe(
+      map(response => {
+        return response;
+      })
+    );
+  }
+
+
 }
